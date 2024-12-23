@@ -4,7 +4,12 @@ import { Amplify } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
-import awsExports from "./aws-exports";
+//import awsExports from "./aws-exports";
+import awsExports from "./aws-config";
+
+console.log('Amplify Configuration:', awsExports); // 設定内容を確認
+console.log(process.env.REACT_APP_AWS_PROJECT_REGION );
+
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
