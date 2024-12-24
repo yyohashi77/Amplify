@@ -1,0 +1,24 @@
+type Instance @model
+  @auth(rules: [{allow: private}]) {
+  instanceId: ID!
+  instanceName: String
+  region: String!
+  state: String!
+  launchTime: AWSDateTime!
+  collectionTime: AWSDateTime!
+  totalStorage: Int!
+  stopRequestTime: AWSDateTime
+  startRequestTime: AWSDateTime
+  backupRequestTime: AWSDateTime
+  autoStartStop: Boolean!
+  weekdaysOnly: Boolean!
+}
+
+input UpdateInstanceInput {
+  instanceId: ID!
+  stopRequestTime: AWSDateTime
+  startRequestTime: AWSDateTime
+  backupRequestTime: AWSDateTime
+  autoStartStop: Boolean
+  weekdaysOnly: Boolean
+}

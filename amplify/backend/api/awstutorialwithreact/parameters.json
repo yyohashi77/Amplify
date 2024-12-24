@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "awstutorialwithreact",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authawstutorialwithreact8d430c58",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2024-12-24T04:43:48.651Z"
+}
